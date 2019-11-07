@@ -42,15 +42,15 @@ class SumReg extends Component {
   val io = new Bundle {
     val a = in(SInt(4 bits))
     val b = in(SInt(4 bits))
-    //val c = inout(SInt(4 bits))
-    //val d = out(SInt(4 bits))
+    val c = inout(SInt(4 bits))
+    val d = out(SInt(4 bits))
   }
 
   val reg = Reg(SInt(4 bits))
   
   reg := io.a + io.b
-  //io.c := reg
-  //io.d := reg
+  io.c := reg
+  io.d := reg
 }
 
 

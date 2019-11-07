@@ -172,15 +172,13 @@ object SpinalGraphics {
     val labelHeight = labelFontMetrics.getHeight()
 
     var inSigsRelY = (1 to compInfo.inSigs.length).map((x: Int) => (x * (labelHeight + config.sigPadY))-labelHeight/2 + config.boxBorderPad: Double).toArray
-    val inOutSigsRelStartY = if (inSigsRelY.length > 0) inSigsRelY.last + config.groupPadY else inSigsRelY.last 
+    val inOutSigsRelStartY = if (inSigsRelY.length > 0) inSigsRelY.last + config.groupPadY else config.boxBorderPad
 
-    var inOutSigsRelY = (0 to compInfo.inOutSigs.length).map((x: Int) => (x * (labelHeight + config.sigPadY)) + inOutSigsRelStartY: Double).toArray
-    val leftEndY = inOutSigsRelY.last + config.boxBorderPad
-    inOutSigsRelY = inOutSigsRelY.dropRight(1)
+    var inOutSigsRelY = (1 to compInfo.inOutSigs.length).map((x: Int) => (x * (labelHeight + config.sigPadY))  +  inOutSigsRelStartY: Double).toArray
+    val leftEndY = (if (inOutSigsRelY.length > 0) inOutSigsRelY.last + config.boxBorderPad else inOutSigsRelStartY + config.boxBorderPad) + labelHeight/2
 
-    var outSigsRelY = (0 to compInfo.outSigs.length).map((x: Int) => (x * (labelHeight + config.sigPadY)) + config.boxBorderPad: Double).toArray
-    val rightEndY = outSigsRelY.last + config.boxBorderPad
-    outSigsRelY = outSigsRelY.dropRight(1)
+    var outSigsRelY = (1 to compInfo.outSigs.length).map((x: Int) => (x * (labelHeight + config.sigPadY)) - labelHeight/2 + config.boxBorderPad: Double).toArray
+    val rightEndY = if (outSigsRelY.length > 0) outSigsRelY.last + config.boxBorderPad else config.boxBorderPad
 
     val boxHeight = leftEndY max rightEndY
 
@@ -199,7 +197,7 @@ object SpinalGraphics {
 
     val sigsLabels = (compInfo.inSigs ++ compInfo.inOutSigs ++ compInfo.outSigs).map(_.name)
     val sigsX = (inSigsRelX ++ inOutSigsRelX ++ outSigsRelX)
-    val sigsY = (inSigsRelY ++ inOutSigsRelX ++ outSigsRelY)
+    val sigsY = (inSigsRelY ++ inOutSigsRelY ++ outSigsRelY)
     val sigPos = sigsX zip sigsY
 
     val sigsLabelPositions = sigsLabels.zip(sigPos).map({case (str, (x, y)) => (str, x, y)})
@@ -224,11 +222,11 @@ object SpinalGraphics {
 
     val inArrowX = Array.fill(compInfo.inSigs.length)(-config.arrowPadX-config.arrowLength)
     val inOutArrowX = Array.fill(compInfo.inOutSigs.length)(-config.arrowPadX-config.arrowLength)
-    val outArrowX = Array.fill(compInfo.outSigs.length)(config.arrowPadX)
+    val outArrowX = Array.fill(compInfo.outSigs.length)(config.arrowPadX + boxWidth)
     
     val inArrowPos = inArrowX.zip(inArrowY).map({case (x,y) => (ArrowDirection.PointRight, x, y) : (ArrowDirection, Double, Double)})
     val inOutArrowPos = inOutArrowX.zip(inOutArrowY).map({case (x,y) => (ArrowDirection.PointBoth, x, y) : (ArrowDirection, Double, Double)})
-    val outArrowPos = outArrowX.zip(outArrowX).map({case (x,y) => (ArrowDirection.PointRight, x, y) : (ArrowDirection, Double, Double)})
+    val outArrowPos = outArrowX.zip(outArrowY).map({case (x,y) => (ArrowDirection.PointRight, x, y) : (ArrowDirection, Double, Double)})
 
     val arrowPos = inArrowPos ++ inOutArrowPos ++ outArrowPos
 
