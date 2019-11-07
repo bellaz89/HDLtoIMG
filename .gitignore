@@ -1,2 +1,8 @@
 *.class
 *.log
+*.pdf
+*.svg
+*.eps
+*.vhd
+*.jpg
+target/
