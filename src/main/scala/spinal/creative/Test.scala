@@ -43,20 +43,22 @@ class SumReg extends Component {
     val a = in(SInt(4 bits))
     val b = in(SInt(4 bits))
     val c = inout(SInt(4 bits))
-    val d = out(SInt(4 bits))
+    val d = out(SInt(32 bits))
+    val f = out(Bool)
   }
 
   val reg = Reg(SInt(4 bits))
   
   reg := io.a + io.b
   io.c := reg
-  io.d := reg
+  io.d := reg.resized
+  io.f := False
 }
 
 
 object ComponentTest {
 	def main(args: Array[String]): Unit = {
-      SpinalGraphics.fromComponent(new SumReg(), "test.pdf")
+      SpinalGraphics.fromComponent(new SumReg(), "test.svg")
       //val report = SpinalVhdl(new SumReg())
 	}
 }
