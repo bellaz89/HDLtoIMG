@@ -1,20 +1,22 @@
 package spinal.creative
 
-import scala.collection.mutable.ArrayBuffer
 import math._
+
+import scala.collection.JavaConversions._
+import scala.collection.mutable.ListBuffer
+import scala.util.matching.Regex
+import scala.collection.mutable.{ArrayBuffer, LinkedHashMap}
 
 import java.awt.{Font, Color, BasicStroke, FontMetrics}
 import java.awt.geom._
 import java.io._
-
-import scala.collection.JavaConversions._
-import scala.collection.mutable.ListBuffer
 
 import de.erichseifert.vectorgraphics2d._
 import de.erichseifert.vectorgraphics2d.util._ 
 
 import spinal.core._
 import spinal.core.internals._
+
 
 sealed trait BoxWidthPolicy
 case class BoxConstantWidth(width: Double) extends BoxWidthPolicy
@@ -47,7 +49,19 @@ sealed abstract trait ArrowStyle
     object StyleFull extends ArrowStyle
     object StyleEmpty extends ArrowStyle
     object StyleReentrant extends ArrowStyle
-    object StyleMinimal extends ArrowStyle }
+    object StyleMinimal extends ArrowStyle 
+}
+
+sealed abstract trait GroupPolicy
+  object GroupPolicy {
+
+    val defaultGroupRegex = """^(?:io_)?([^_]*).*""".r
+
+    object SimplePolicy extends GroupPolicy
+    case class RegexGroupsPolicy(groupRegex: Regex = defaultGroupRegex) extends GroupPolicy
+    //object GroupByRegexPolicyIO() extends GroupPolicy
+    //object GroupEqualDistributionPolicy() extends GroupPolicy
+}
 
 
 case class SpinalGraphicsConfig (var figPadX: Double,
@@ -65,6 +79,7 @@ case class SpinalGraphicsConfig (var figPadX: Double,
   var sigFont: Font,
   var descPadX: Double,
   var groupPadY: Double,
+  var groupPolicy: GroupPolicy,
   var arrowLength: Double,
   var arrowPadX: Double,
   var arrowThickness: Double,
@@ -79,7 +94,7 @@ object SpinalGraphicsConfig {
       4.0, 
       1.0, 
       2.0,
-      new Font("Serif", Font.BOLD, 11),
+      new Font("Courier", Font.BOLD, 11),
       (VAlignment.Bottom, HAlignment.Right),
       0.25,
       Color.orange,
@@ -87,9 +102,10 @@ object SpinalGraphicsConfig {
       2.0,
       1.0,
       1.0,
-      new Font("Serif", Font.BOLD, 10),
+      new Font("Courier", Font.BOLD, 10),
       1.0,
       10.0,
+      GroupPolicy.RegexGroupsPolicy(),
       30.0,
       0.0,
       1.0,
@@ -109,13 +125,22 @@ object SpinalGraphics {
     arrowPositions: Array[(ArrowDirection, ArrowStyle, Double, Double)],
     labelPositions: Array[(String, Double, Double)])
 
-  sealed abstract trait ArrowDirection
+  sealed abstract trait ArrowDirection 
   object ArrowDirection {
     object PointRight extends ArrowDirection
+    object PointLeft extends ArrowDirection
     object PointBoth extends ArrowDirection
   }
 
-  case class SignalInfo(name: String, desc: String, dir: ArrowDirection, sty: ArrowStyle)
+  case class SignalInfo(name: String, desc: String, dir: ArrowDirection, sty: ArrowStyle) {
+  
+    def withFlippedArrow : SignalInfo = dir match {
+      case ArrowDirection.PointRight => this.copy(dir=ArrowDirection.PointLeft)
+      case ArrowDirection.PointLeft => this.copy(dir=ArrowDirection.PointRight)
+      case ArrowDirection.PointBoth => this.copy()
+    } 
+  }
+
   case class ComponentInfo(componentName: String, 
     groupsLeft: Array[Array[SignalInfo]], 
     groupsRight: Array[Array[SignalInfo]])
@@ -161,9 +186,7 @@ object SpinalGraphics {
 
   def getComponentInfo[T <: Component](config: SpinalGraphicsConfig, report: => SpinalReport[T]) : ComponentInfo = {
 
-    var inSigs : ArrayBuffer[SignalInfo] = ArrayBuffer()
-    var outSigs : ArrayBuffer[SignalInfo] = ArrayBuffer()
-    var inOutSigs : ArrayBuffer[SignalInfo] = ArrayBuffer()
+    var signals : ArrayBuffer[SignalInfo] = ArrayBuffer()
 
     val regexIn    = """.* : in (.*)\)""".r
     val regexOut   = """.* : out (.*)\)""".r
@@ -171,15 +194,70 @@ object SpinalGraphics {
 
     for (sig <- report.toplevel.getAllIo) {
       sig.toString match {
-        case regexIn(identifier) => inSigs += new SignalInfo(sig.getName, identifier, ArrowDirection.PointRight, config.arrowStyle)
-        case regexOut(identifier) => outSigs += new SignalInfo(sig.getName, identifier, ArrowDirection.PointRight, config.arrowStyle)
-        case regexInOut(identifier) => inOutSigs += new SignalInfo(sig.getName, identifier, ArrowDirection.PointBoth, config.arrowStyle)
-        case _ =>
+        case regexIn(identifier) => signals += new SignalInfo(sig.getName, identifier, ArrowDirection.PointRight, config.arrowStyle)
+        case regexOut(identifier) => signals += new SignalInfo(sig.getName, identifier, ArrowDirection.PointLeft, config.arrowStyle)
+        case regexInOut(identifier) => signals += new SignalInfo(sig.getName, identifier, ArrowDirection.PointBoth, config.arrowStyle)
+        case _ => {
+          println("Unknown " ++ sig.toString)
+          signals += new SignalInfo(sig.getName, sig.toString , ArrowDirection.PointBoth, config.arrowStyle)
+        }
       }
     }
-    new ComponentInfo(report.toplevelName, 
-      Array(inSigs.toArray, inOutSigs.toArray).filter(_.length > 0), 
-      Array(outSigs.toArray).filter(_.length > 0))
+
+    config.groupPolicy match {
+      case GroupPolicy.SimplePolicy => {
+
+        var inSigs    : Array[SignalInfo] = signals.filter(_.dir == ArrowDirection.PointRight).toArray
+        var inOutSigs : Array[SignalInfo] = signals.filter(_.dir == ArrowDirection.PointBoth).toArray
+        var outSigs   : Array[SignalInfo] = signals.filter(_.dir == ArrowDirection.PointLeft).toArray
+
+        new ComponentInfo(report.toplevelName, 
+                          Array(inSigs, inOutSigs).filter(_.length > 0), 
+                          reverseGroupsArrowDirection(Array(outSigs).filter(_.length > 0)))
+      }
+
+      case GroupPolicy.RegexGroupsPolicy(regex) => {
+        val groupsRaw : LinkedHashMap[String, ArrayBuffer[SignalInfo]] = LinkedHashMap()
+        for (sig <- signals) {
+          sig.name match { 
+            case regex(groupName) => {
+              if (groupsRaw contains groupName) {
+                groupsRaw(groupName) += sig
+              } else {
+                groupsRaw += (groupName -> ArrayBuffer(sig))
+              }
+            }
+          }
+        }
+
+
+        val singletonGroup = groupsRaw.toArray
+                                     .unzip
+                                     ._2
+                                     .filter( _.length < 2)
+                                     .map(_.toArray)
+                                     .flatten
+
+        val fatGroups = groupsRaw.toArray
+                                 .unzip
+                                 ._2
+                                 .filter( _.length >= 2)
+                                 .map(_.toArray)
+
+        val groups = if (singletonGroup.length > 0) singletonGroup +: fatGroups else fatGroups 
+
+        val splitAtValue = groups.length - groups.length/2
+
+        val (leftGroups, rightGroups) = groups.splitAt(splitAtValue)
+
+        new ComponentInfo(report.toplevelName, leftGroups, reverseGroupsArrowDirection(rightGroups))
+      }
+    }
+
+     }
+
+  def reverseGroupsArrowDirection(groups: Array[Array[SignalInfo]]) : Array[Array[SignalInfo]] = {
+    groups.map(group => group.map(_.withFlippedArrow))
   }
 
   def getGroupsHeight(config: SpinalGraphicsConfig, groups: Array[Array[SignalInfo]], fontMetrics: FontMetrics) : Double = {
@@ -366,8 +444,6 @@ object SpinalGraphics {
 
   def drawBox(vg2d : VectorGraphics2D, config: SpinalGraphicsConfig, compPositions: ComponentFigurePositions) {
 
-    println(compPositions)
-
     vg2d.translate(compPositions.boxPos._1.toInt, compPositions.boxPos._2.toInt)
     vg2d.setColor(config.boxFillColor)
     vg2d.fillRect(0, 0, compPositions.boxSize._1.toInt, compPositions.boxSize._2.toInt)
@@ -413,6 +489,11 @@ object SpinalGraphics {
         vg2d.fillPolygon(xVertexR, yVertexR, 3)
       }
       
+      case ArrowDirection.PointLeft => {
+        vg2d.drawLine((x + config.arrowTipSize).toInt, y.toInt,  xend.toInt, y.toInt)
+        vg2d.fillPolygon(xVertexL, yVertexL, 3)
+      }
+      
       case ArrowDirection.PointBoth => {
         vg2d.drawLine((x + config.arrowTipSize).toInt, y.toInt,  (xend.toInt - config.arrowTipSize).toInt, y.toInt)
         vg2d.fillPolygon(xVertexR, yVertexR, 3)
@@ -437,6 +518,14 @@ object SpinalGraphics {
         vg2d.drawPolygon(xVertexR, yVertexR, 3)
       }
       
+      case ArrowDirection.PointLeft => {
+        vg2d.drawLine((x + config.arrowTipSize).toInt, y.toInt,  xend.toInt, y.toInt)
+        vg2d.setColor(Color.white)
+        vg2d.fillPolygon(xVertexL, yVertexL, 3)
+        vg2d.setColor(Color.black)
+        vg2d.drawPolygon(xVertexL, yVertexL, 3)
+      }
+
       case ArrowDirection.PointBoth => {
         vg2d.drawLine((x + config.arrowTipSize).toInt, y.toInt,  (xend.toInt - config.arrowTipSize).toInt, y.toInt)
         vg2d.setColor(Color.white)
@@ -461,7 +550,12 @@ object SpinalGraphics {
         vg2d.drawLine(x.toInt, y.toInt,  (xend - config.arrowTipSize).toInt, y.toInt)
         vg2d.fillPolygon(xVertexR, yVertexR, 4)
       }
-      
+     
+      case ArrowDirection.PointLeft => {
+        vg2d.drawLine((x + config.arrowTipSize).toInt, y.toInt,  xend.toInt, y.toInt)
+        vg2d.fillPolygon(xVertexL, yVertexL, 4)
+      }
+
       case ArrowDirection.PointBoth => {
         vg2d.drawLine((x + config.arrowTipSize).toInt, y.toInt,  (xend.toInt - config.arrowTipSize).toInt, y.toInt)
         vg2d.fillPolygon(xVertexR, yVertexR, 4)
@@ -482,6 +576,12 @@ object SpinalGraphics {
         vg2d.drawLine(x.toInt, y.toInt,  (xend - config.arrowThickness/2).toInt, y.toInt)
         vg2d.drawLine(xVertexR(0), yVertexR(0), xVertexR(1), yVertexR(1))
         vg2d.drawLine(xVertexR(0), yVertexR(0), xVertexR(2), yVertexR(2))
+      }
+ 
+      case ArrowDirection.PointLeft => {
+        vg2d.drawLine((x + config.arrowThickness).toInt, y.toInt,  xend.toInt, y.toInt)
+        vg2d.drawLine(xVertexL(0), yVertexL(0), xVertexL(1), yVertexL(1))
+        vg2d.drawLine(xVertexL(0), yVertexL(0), xVertexL(2), yVertexL(2))
       }
       
       case ArrowDirection.PointBoth => {
