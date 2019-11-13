@@ -97,6 +97,14 @@ object OutputConfig {
   }
 }
 
+case class SignalInfo(name: String, desc: String, dir: ArrowDirection, sty: ArrowStyle) {
+  def withFlippedArrow : SignalInfo = dir match {
+    case ArrowDirection.PointRight => this.copy(dir=ArrowDirection.PointLeft)
+    case ArrowDirection.PointLeft => this.copy(dir=ArrowDirection.PointRight)
+    case ArrowDirection.PointBoth => this.copy()
+  } 
+}
+
 case class ComponentInfo(componentName: String, 
   groupsLeft: Array[Array[SignalInfo]], 
   groupsRight: Array[Array[SignalInfo]])
@@ -117,15 +125,6 @@ object ArrowDirection {
   object PointLeft extends ArrowDirection
   object PointBoth extends ArrowDirection
 }
-
-case class SignalInfo(name: String, desc: String, dir: ArrowDirection, sty: ArrowStyle) {
-  def withFlippedArrow : SignalInfo = dir match {
-    case ArrowDirection.PointRight => this.copy(dir=ArrowDirection.PointLeft)
-    case ArrowDirection.PointLeft => this.copy(dir=ArrowDirection.PointRight)
-    case ArrowDirection.PointBoth => this.copy()
-  } 
-}
-
 object ComponentSVG {
   def fromUnsorted(componentInfo: ComponentInfo, out: OutputStream, config: OutputConfig) {
 
