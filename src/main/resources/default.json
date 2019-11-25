@@ -3,7 +3,7 @@
 "figPadY": 4.0,
 "compPadX": 1.0,
 "compPadY": 2.0,
-"compFont": {"font": "Courier", "weight": "Bold", "size":11},
+"compFont": {"font": "Courier", "weight": "BOLD", "size":11},
 "compAlignment": ["Bottom", "Right"],
 "boxTickness": 0.25,
 "boxFillColor": [0.5, 0.5, 0.0],
@@ -11,7 +11,7 @@
 "boxBorderPad": 2.0,
 "sigPadX": 1.0,
 "sigPadY": 1.0,
-"sigFont": {"font": "Courier", "weight": "Bold", "size":10},
+"sigFont": {"font": "Courier", "weight": "BOLD", "size":10},
 "descPadX": 1.0,
 "groupPadY": 10.0,
 "groupPolicy": {"type": "SimplePolicy"},
@@ -19,7 +19,7 @@
 "arrowPadX": 0.0,
 "arrowThickness": 1.0,
 "arrowTipSize": 3.0,
-"arrowStyle": "Reentrant",
-"outputType": "SVG",
+"arrowStyle": "StyleReentrant",
+"outputType": "SVGTypeOutput",
 "removeDefaultInputArg": true
 }
