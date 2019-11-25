@@ -1,4 +1,4 @@
-package com.github.hdltosvg.spinal
+package com.github.hdltoimg.spinal
 
 import java.io._
 import scala.collection.mutable.ArrayBuffer

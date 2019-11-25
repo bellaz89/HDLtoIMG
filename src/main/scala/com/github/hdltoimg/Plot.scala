@@ -1,4 +1,4 @@
-package com.github.hdltosvg
+package com.github.hdltoimg
 
 import de.erichseifert.vectorgraphics2d._
 import de.erichseifert.vectorgraphics2d.util._ 

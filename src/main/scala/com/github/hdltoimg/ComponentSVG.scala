@@ -1,4 +1,4 @@
-package hdltosvg
+package com.github.hdltoimg
 
 import scala.collection.JavaConversions._
 import scala.collection.mutable.ListBuffer

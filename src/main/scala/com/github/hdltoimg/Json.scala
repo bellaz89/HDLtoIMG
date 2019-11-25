@@ -1,4 +1,4 @@
-package hdltosvg
+package com.github.hdltoimg
 
 import scala.io.Source
 import java.io.{File, FileInputStream, BufferedReader}

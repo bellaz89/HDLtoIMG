@@ -1,4 +1,4 @@
-package com.github.hdltosvg.vhdl
+package com.github.hdltoimg.vhdl
 import scala.io.Source
 import java.io.{File, FileOutputStream}
 import scopt.OParser

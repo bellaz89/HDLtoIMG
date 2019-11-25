@@ -1,4 +1,4 @@
-package com.github.hdltosvg
+package com.github.hdltoimg
 
 import scala.util.matching.Regex
 import scala.collection.mutable.{ArrayBuffer, LinkedHashMap}

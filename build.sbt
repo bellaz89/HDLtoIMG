@@ -5,15 +5,15 @@ enablePlugins(DebianPlugin)
 enablePlugins(RpmPlugin)
 enablePlugins(WindowsPlugin)
 
-name := "HDLtoSVG"
+name := "HDLtoIMG"
 
 version := "1.0"
 
 maintainer := "Andrea Bellandi <andrea.bellandi@desy.de>"
 
-packageSummary := "HDL to SVG generator"
+packageSummary := "HDL to image generator"
 
-packageDescription := """ A generator of the graphical representation of component interface. VHDL and SpinalHDL are supported. The output file format is SVG (PDF coming)"""
+packageDescription := """ A generator of the graphical representation of component interface. VHDL and SpinalHDL are supported. The default output file format is SVG"""
 
 wixProductId := ""
 wixProductUpgradeId := ""

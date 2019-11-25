@@ -1,4 +1,4 @@
-package com.github.hdltosvg
+package com.github.hdltoimg
 
 import math._
 
