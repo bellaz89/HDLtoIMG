@@ -87,7 +87,7 @@ object OutputConfig {
       new Font("Courier", Font.BOLD, 10),
       1.0,
       10.0,
-      GroupPolicy.RegexGroupsPolicy(),
+      GroupPolicy.SimplePolicy,
       30.0,
       0.0,
       1.0,

@@ -65,7 +65,7 @@ object layout {
   def getGroupsWidth(config: OutputConfig, groups: Array[Array[SignalInfo]], fontMetrics: FontMetrics) : Double = {
     groups.flatten
       .map(x => fontMetrics.stringWidth(x.name))
-      .reduce((y, z) => y max z)
+      .foldLeft(0)((y, z) => y max z)
   }
 
   def getBoxSize(config: OutputConfig, compInfo: ComponentInfo, fontMetrics: FontMetrics) : (Double, Double) = {
@@ -89,7 +89,7 @@ object layout {
   def getGroupsDescWidth(config: OutputConfig, groups: Array[Array[SignalInfo]], fontMetrics: FontMetrics) : Double = {
     groups.flatten
       .map(x => fontMetrics.stringWidth(x.desc))
-      .reduce((y, z) => y max z)
+      .foldLeft(0)((y, z) => y max z)
   }
 
   def getFigWidth(vg2d: VectorGraphics2D, config: OutputConfig, compInfo: ComponentInfo, boxSize: (Double, Double)) : Double = {
