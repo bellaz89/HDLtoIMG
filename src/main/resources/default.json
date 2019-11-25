@@ -6,7 +6,7 @@
 "compFont": {"font": "Courier", "weight": "BOLD", "size":11},
 "compAlignment": ["Bottom", "Right"],
 "boxTickness": 0.25,
-"boxFillColor": [0.5, 0.5, 0.0],
+"boxFillColor": [0.67, 1.0, 0.97],
 "boxWidthPolicy": {"type": "BoxSigNamePad", "pad": 20.0},
 "boxBorderPad": 2.0,
 "sigPadX": 1.0,
