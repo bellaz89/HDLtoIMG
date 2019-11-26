@@ -36,9 +36,16 @@ object VhdlToImg {
                            .map(removeComments(_))
                            .mkString
         val components = getAll(source).map(getComponentInfo(_, config.outputOpt))
+
+        val extension = config.outputOpt.outputType match {
+          case OutputType.PDFTypeOutput => ".pdf"
+          case OutputType.EPSTypeOutput => ".eps"
+          case OutputType.SVGTypeOutput => ".svg"
+        }
+        
         components.foreach { 
           cmp => ComponentSVG.fromUnsorted(cmp,
-            new FileOutputStream(cmp.componentName ++ ".svg"),
+            new FileOutputStream(cmp.componentName + extension),
             config.outputOpt) 
         }
       }
