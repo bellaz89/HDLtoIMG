@@ -128,16 +128,16 @@ For components with a lot of ports sometimes the resulting image looks a bit dif
 
 ![ungrouped](./res/VexRiscv-ungrouped.svg)
 
-The above example shows the interface of a CPU. It would be better to group the 
-signals that belong to the same bus together. This is possible using the 
+The above example shows the interface of a CPU. It would be better to group together the 
+signals that belong to the same bus. This is possible using the 
 **RegexGroupsPolicy**. With this policy the signals are grouped using a regex
-(**groupRegex**) that matches the group name.
+(**groupRegex**) that matches the group name. For example:  
 
 ```json
     "groupPolicy": {"type": "RegexGroupsPolicy", "groupRegex": "^([^_]*).*"}
 ```
 
-That produces:
+Produces:
 
 ![grouped](./res/VexRiscv-grouped.svg)
 
