@@ -22,7 +22,7 @@ end ExampleComp;
 
 ```
 
-Here there are some examples of the produced images: <br /> 
+Here there are some examples of the produced images using vhdl-to-img: <br /> 
 
 Serif Bold font, Top Left component name, arrow style None: <br/>
 ![style1](./res/ExampleComp_1.svg)
@@ -81,6 +81,9 @@ otherwise you can simply type
 ```bash
     vhdl-to-img -i source.vhd -c conf.json
 ```
+
+Note that the the -c switch is optional. In this case a default configuration will
+be applied.
 
 ### Size mappings
 <br/>
@@ -176,6 +179,8 @@ There are four options:
 - [WIX Toolset](https://wixtoolset.org/)
 
 ## Installation
+
+The packaging process is based on [sbt-native-packager](https://www.scala-sbt.org/sbt-native-packager/introduction.html). More options for package generation are available at that site.
 
 ### General
 
