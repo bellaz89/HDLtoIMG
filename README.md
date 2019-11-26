@@ -22,52 +22,51 @@ end ExampleComp;
 
 ```
 
-Here there are 
+Here there are some examples 
 
-Serif font, Top Left component name, arrow style None: <br/>
+Serif Bold font, Top Left component name, arrow style None: <br/>
 ![style1](./res/ExampleComp_1.svg)
 
-Arial font, Top Center component name, arrow style Full: <br/>
+Arial Bold font, Top Center component name, arrow style Full: <br/>
 ![style2](./res/ExampleComp_2.svg)
 
-FreeMono font, Top Right component name, arrow style Empty: <br/>
+FreeMono Bold font, Top Right component name, arrow style Empty: <br/>
 ![style3](./res/ExampleComp_3.svg)
 
-FreeSans font, Bottom Left component name, arrow style Reentrant: <br/>
+FreeSans Bold font, Bottom Left component name, arrow style Reentrant: <br/>
 ![style4](./res/ExampleComp_4.svg)
 
-Serif font, Bottom Right component name, arrow style Minimal: <br/>
+Serif Italic font, Bottom Right component name, arrow style Minimal: <br/>
 ![style5](./res/ExampleComp_5.svg)
 <br/>
 Here it is the JSON configuration file for the last example
 
 ```json
 {
-"figPadX": 8.0,
-"figPadY": 8.0,
-"compPadX": 4.0,
-"compPadY": 4.0,
-"compFont": {"font": "Serif", "weight": "BOLD", "size":11},
-"compAlignment": ["Top", "Left"],
-"boxTickness": 1.0,
-"boxFillColor": [1.0, 1.0, 1.0],
+"figPadX": 4.0,
+"figPadY": 4.0,
+"compPadX": 1.0,
+"compPadY": 2.0,
+"compFont": {"font": "Times New Roman", "weight": "ITALIC", "size":11},
+"compAlignment": ["Bottom", "Right"],
+"boxTickness": 0.25,
+"boxFillColor": [1.0, 0.5, 0.94],
 "boxWidthPolicy": {"type": "BoxSigNamePad", "pad": 20.0},
-"boxBorderPad": 4.0,
-"sigPadX": 4.0,
-"sigPadY": 4.0,
-"sigFont": {"font": "Serif", "weight": "BOLD", "size":10},
-"descPadX": 4.0,
+"boxBorderPad": 2.0,
+"sigPadX": 1.0,
+"sigPadY": 1.0,
+"sigFont": {"font": "Times New Roman", "weight": "ITALIC", "size":10},
+"descPadX": 1.0,
 "groupPadY": 10.0,
 "groupPolicy": {"type": "SimplePolicy"},
 "arrowLength": 30.0,
-"arrowPadX": 2.0,
-"arrowThickness": 2.0,
+"arrowPadX": 0.0,
+"arrowThickness": 1.0,
 "arrowTipSize": 3.0,
-"arrowStyle": "StyleEmpty",
+"arrowStyle": "StyleMinimal",
 "outputType": "SVGTypeOutput",
 "removeDefaultInputArg": true
 }
-
 ```
 
 ## Usage
