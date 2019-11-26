@@ -212,4 +212,5 @@ Generates a .msi in target/
 
 ## Notes
 
-All the HDL examples were produced using [SpinalHDL](https://github.com/SpinalHDL/SpinalHDL)
+All the HDL examples were produced using [SpinalHDL](https://github.com/SpinalHDL/SpinalHDL) and
+[VexRiscv](https://github.com/SpinalHDL/VexRiscv)
