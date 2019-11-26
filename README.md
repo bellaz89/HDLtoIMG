@@ -85,7 +85,8 @@ otherwise you can simply type
 
 ### Size mappings
 <br/>
-![comp](./res/ExampleCompExpl.svg)
+
+![comp](./res/ExampleCompExpl.png)
 
 maps to the following JSON properties: <br/>
 
