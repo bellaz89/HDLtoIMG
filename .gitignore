@@ -7,3 +7,4 @@
 *.jpg
 *.swp
 target/
+!res/

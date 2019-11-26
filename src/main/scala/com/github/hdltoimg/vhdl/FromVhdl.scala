@@ -2,10 +2,10 @@ package com.github.hdltoimg.vhdl
 import scala.io.Source
 import java.io.{File, FileOutputStream}
 import scopt.OParser
-import vom.github.hdltosvg._
+import com.github.hdltoimg._
 
 
-object Vhdl2Img {
+object VhdlToImg {
 
   case class ProgramOptions(
     file: File = new File("."),

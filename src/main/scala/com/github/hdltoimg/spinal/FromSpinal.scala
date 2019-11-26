@@ -6,7 +6,7 @@ import scala.collection.mutable.ArrayBuffer
 import spinal.core._
 import spinal.core.internals._
 
-import com.github.hdltosvg.{ComponentSVG, SignalInfo, OutputConfig, ArrowDirection, ComponentInfo}
+import com.github.hdltoimg.{ComponentSVG, SignalInfo, OutputConfig, ArrowDirection, ComponentInfo}
 
 object fromComponent {
   def apply[T <: Component](component: => T, filename: String) { fromComponent(component, filename, OutputConfig.default()) }
