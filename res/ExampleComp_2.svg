@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" height="96px" version="1.1" viewBox="0 0 348 96" width="348px" x="0px" y="0px" xmlns="http://www.w3.org/2000/svg">
-  <g transform="translate(146 19)">
-    <rect height="73" style="fill:rgb(255,252,128);stroke:none;" width="68" x="0" y="0"/>
-    <rect height="73" style="fill:none;stroke:rgb(0,0,0);stroke-width:0.25;stroke-miterlimit:10;stroke-linecap:square;" width="68" x="0" y="0"/>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" height="106px" version="1.1" viewBox="0 0 330 106" width="330px" x="0px" y="0px" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(128 19)">
+    <rect height="83" style="fill:rgb(255,252,128);stroke:none;" width="68" x="0" y="0"/>
+    <rect height="83" style="fill:none;stroke:rgb(0,0,0);stroke-width:0.25;stroke-miterlimit:10;stroke-linecap:square;" width="68" x="0" y="0"/>
     <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;Arial&quot;;font-size:11px;font-weight:bold;" x="-5" y="-5">ExampleComp</text>
     <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;Arial&quot;;font-size:10px;font-weight:bold;" x="1" y="12">io_a</text>
     <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;Arial&quot;;font-size:10px;font-weight:bold;" x="1" y="26">io_b</text>
-    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;Arial&quot;;font-size:10px;font-weight:bold;" x="1" y="40">io_c</text>
-    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;Arial&quot;;font-size:10px;font-weight:bold;" x="1" y="54">clk</text>
-    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;Arial&quot;;font-size:10px;font-weight:bold;" x="1" y="68">reset</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;Arial&quot;;font-size:10px;font-weight:bold;" x="1" y="40">clk</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;Arial&quot;;font-size:10px;font-weight:bold;" x="1" y="54">reset</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;Arial&quot;;font-size:10px;font-weight:bold;" x="1" y="77">io_c</text>
     <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;Arial&quot;;font-size:10px;font-weight:bold;" x="46" y="12">io_d</text>
     <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;Arial&quot;;font-size:10px;font-weight:bold;" x="49" y="26">io_f</text>
     <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;Arial&quot;;font-size:10px;font-weight:bold;" x="-124" y="12">signed(3 downto 0)</text>
     <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;Arial&quot;;font-size:10px;font-weight:bold;" x="-124" y="26">signed(3 downto 0)</text>
-    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;Arial&quot;;font-size:10px;font-weight:bold;" x="-142" y="40">out signed(3 downto 0)</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;Arial&quot;;font-size:10px;font-weight:bold;" x="-76" y="40">std_logic</text>
     <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;Arial&quot;;font-size:10px;font-weight:bold;" x="-76" y="54">std_logic</text>
-    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;Arial&quot;;font-size:10px;font-weight:bold;" x="-76" y="68">std_logic</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;Arial&quot;;font-size:10px;font-weight:bold;" x="-124" y="77">signed(3 downto 0)</text>
     <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;Arial&quot;;font-size:10px;font-weight:bold;" x="99" y="12">signed(31 downto 0)</text>
     <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;Arial&quot;;font-size:10px;font-weight:bold;" x="99" y="26">std_logic</text>
     <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="-30" x2="-3" y1="9" y2="9"/>
@@ -27,8 +27,9 @@
     <path d="M0,37 L-6.0,40 L-6.0,34 Z" style="fill:rgb(0,0,0);stroke:none;"/>
     <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="-30" x2="-3" y1="51" y2="51"/>
     <path d="M0,51 L-6.0,54 L-6.0,48 Z" style="fill:rgb(0,0,0);stroke:none;"/>
-    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="-30" x2="-3" y1="65" y2="65"/>
-    <path d="M0,65 L-6.0,68 L-6.0,62 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="-27" x2="-3" y1="74" y2="74"/>
+    <path d="M0,74 L-6.0,77 L-6.0,71 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <path d="M-30,74 L-24.0,77 L-24.0,71 Z" style="fill:rgb(0,0,0);stroke:none;"/>
     <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="68" x2="95" y1="9" y2="9"/>
     <path d="M98,9 L92.0,12 L92.0,6 Z" style="fill:rgb(0,0,0);stroke:none;"/>
     <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="68" x2="95" y1="23" y2="23"/>
