@@ -85,11 +85,11 @@ otherwise you can simply type
 
 ### Size mappings
 <br/>
-[comp](./res/ExampleCompExpl.svg)
+![comp](./res/ExampleCompExpl.svg)
 
 maps to the following JSON properties: <br/>
 
-[mappings](./res/JsonExplainedSizes.svg)
+![mappings](./res/JsonExplainedSizes.svg)
 
 
 ### Box width
@@ -126,7 +126,7 @@ The width of the box is equal to the height multiplied by a ratio
 
 For components with a lot of ports sometimes the resulting image looks a bit difficult to read:
 
-[ungrouped](./res/VexRiscv-ungrouped.svg)
+![ungrouped](./res/VexRiscv-ungrouped.svg)
 
 The above example shows the interface of a CPU. It would be better to group the 
 signals that belong to the same bus togheter. This is possible using the 
@@ -139,7 +139,7 @@ signals that belong to the same bus togheter. This is possible using the
 
 That produces:
 
-[grouped](./res/VexRiscv-grouped.svg)
+![grouped](./res/VexRiscv-grouped.svg)
 
 ### Font weight
 
