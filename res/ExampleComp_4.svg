@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" height="92px" version="1.1" viewBox="0 0 346 92" width="346px" x="0px" y="0px" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(145 4)">
+    <rect height="68" style="fill:rgb(128,240,255);stroke:none;" width="68" x="0" y="0"/>
+    <rect height="68" style="fill:none;stroke:rgb(0,0,0);stroke-width:0.25;stroke-miterlimit:10;stroke-linecap:square;" width="68" x="0" y="0"/>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:11px;font-weight:bold;" x="1" y="80">ExampleComp</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="1" y="11">io_a</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="1" y="24">io_b</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="1" y="37">io_c</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="1" y="50">clk</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="1" y="63">reset</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="46" y="11">io_d</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="49" y="24">io_f</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="-123" y="11">signed(3 downto 0)</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="-123" y="24">signed(3 downto 0)</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="-141" y="37">out signed(3 downto 0)</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="-76" y="50">std_logic</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="-76" y="63">std_logic</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="99" y="11">signed(31 downto 0)</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="99" y="24">std_logic</text>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="-30" x2="-3" y1="8" y2="8"/>
+    <path d="M0,8 L-6.0,11 L-3.0,8 L-6.0,5 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="-30" x2="-3" y1="21" y2="21"/>
+    <path d="M0,21 L-6.0,24 L-3.0,21 L-6.0,18 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="-30" x2="-3" y1="34" y2="34"/>
+    <path d="M0,34 L-6.0,37 L-3.0,34 L-6.0,31 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="-30" x2="-3" y1="47" y2="47"/>
+    <path d="M0,47 L-6.0,50 L-3.0,47 L-6.0,44 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="-30" x2="-3" y1="60" y2="60"/>
+    <path d="M0,60 L-6.0,63 L-3.0,60 L-6.0,57 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="68" x2="95" y1="8" y2="8"/>
+    <path d="M98,8 L92.0,11 L95.0,8 L92.0,5 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="68" x2="95" y1="21" y2="21"/>
+    <path d="M98,21 L92.0,24 L95.0,21 L92.0,18 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+  </g>
+</svg>

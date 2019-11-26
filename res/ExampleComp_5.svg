@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" height="91px" version="1.1" viewBox="0 0 308 91" width="308px" x="0px" y="0px" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(130 4)">
+    <rect height="68" style="fill:rgb(255,128,240);stroke:none;" width="59" x="0" y="0"/>
+    <rect height="68" style="fill:none;stroke:rgb(0,0,0);stroke-width:0.25;stroke-miterlimit:10;stroke-linecap:square;" width="59" x="0" y="0"/>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;Times New Roman&quot;;font-size:11px;font-style:italic;" x="-11" y="80">ExampleComp</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;Times New Roman&quot;;font-size:10px;font-style:italic;" x="1" y="11">io_a</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;Times New Roman&quot;;font-size:10px;font-style:italic;" x="1" y="24">io_b</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;Times New Roman&quot;;font-size:10px;font-style:italic;" x="1" y="37">io_c</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;Times New Roman&quot;;font-size:10px;font-style:italic;" x="1" y="50">clk</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;Times New Roman&quot;;font-size:10px;font-style:italic;" x="1" y="63">reset</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;Times New Roman&quot;;font-size:10px;font-style:italic;" x="40" y="11">io_d</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;Times New Roman&quot;;font-size:10px;font-style:italic;" x="42" y="24">io_f</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;Times New Roman&quot;;font-size:10px;font-style:italic;" x="-110" y="11">signed(3 downto 0)</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;Times New Roman&quot;;font-size:10px;font-style:italic;" x="-110" y="24">signed(3 downto 0)</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;Times New Roman&quot;;font-size:10px;font-style:italic;" x="-126" y="37">out signed(3 downto 0)</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;Times New Roman&quot;;font-size:10px;font-style:italic;" x="-68" y="50">std_logic</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;Times New Roman&quot;;font-size:10px;font-style:italic;" x="-68" y="63">std_logic</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;Times New Roman&quot;;font-size:10px;font-style:italic;" x="90" y="11">signed(31 downto 0)</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;Times New Roman&quot;;font-size:10px;font-style:italic;" x="90" y="24">std_logic</text>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="-30" x2="0" y1="8" y2="8"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="0" x2="-6" y1="8" y2="11"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="0" x2="-6" y1="8" y2="5"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="-30" x2="0" y1="21" y2="21"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="0" x2="-6" y1="21" y2="24"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="0" x2="-6" y1="21" y2="18"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="-30" x2="0" y1="34" y2="34"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="0" x2="-6" y1="34" y2="37"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="0" x2="-6" y1="34" y2="31"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="-30" x2="0" y1="47" y2="47"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="0" x2="-6" y1="47" y2="50"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="0" x2="-6" y1="47" y2="44"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="-30" x2="0" y1="60" y2="60"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="0" x2="-6" y1="60" y2="63"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="0" x2="-6" y1="60" y2="57"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="59" x2="88" y1="8" y2="8"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="89" x2="83" y1="8" y2="11"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="89" x2="83" y1="8" y2="5"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="59" x2="88" y1="21" y2="21"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="89" x2="83" y1="21" y2="24"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="89" x2="83" y1="21" y2="18"/>
+  </g>
+</svg>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" height="271px" version="1.1" viewBox="0 0 697 271" width="697px" x="0px" y="0px" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(181 4)">
+    <rect height="247" style="fill:rgb(128,240,255);stroke:none;" width="335" x="0" y="0"/>
+    <rect height="247" style="fill:none;stroke:rgb(0,0,0);stroke-width:0.25;stroke-miterlimit:10;stroke-linecap:square;" width="335" x="0" y="0"/>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:11px;font-weight:bold;" x="1" y="259">VexRiscv</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="1" y="11">timerInterrupt</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="1" y="24">externalInterrupt</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="1" y="37">softwareInterrupt</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="1" y="50">clk</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="1" y="63">reset</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="1" y="76">debugReset</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="1" y="98">debug_bus_cmd_valid</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="1" y="111">debug_bus_cmd_ready</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="1" y="124">debug_bus_cmd_payload_wr</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="1" y="137">debug_bus_cmd_payload_address</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="1" y="150">debug_bus_cmd_payload_data</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="1" y="163">debug_bus_rsp_data</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="1" y="176">debug_resetOut</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="256" y="11">iBus_cmd_valid</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="252" y="24">iBus_cmd_ready</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="195" y="37">iBus_cmd_payload_address</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="215" y="50">iBus_cmd_payload_size</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="261" y="63">iBus_rsp_valid</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="219" y="76">iBus_rsp_payload_data</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="216" y="89">iBus_rsp_payload_error</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="253" y="111">dBus_cmd_valid</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="249" y="124">dBus_cmd_ready</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="220" y="137">dBus_cmd_payload_wr</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="192" y="150">dBus_cmd_payload_address</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="211" y="163">dBus_cmd_payload_data</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="205" y="176">dBus_cmd_payload_mask</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="202" y="189">dBus_cmd_payload_length</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="214" y="202">dBus_cmd_payload_last</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="258" y="215">dBus_rsp_valid</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="216" y="228">dBus_rsp_payload_data</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="213" y="241">dBus_rsp_payload_error</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="-76" y="11">std_logic</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="-76" y="24">std_logic</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="-76" y="37">std_logic</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="-76" y="50">std_logic</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="-76" y="63">std_logic</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="-76" y="76">std_logic</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="-76" y="98">std_logic</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="-76" y="111">std_logic</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="-76" y="124">std_logic</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="-135" y="137">unsigned(7 downto 0)</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="-177" y="150">std_logic_vector(31 downto 0)</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="-177" y="163">std_logic_vector(31 downto 0)</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="-76" y="176">std_logic</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="11">std_logic</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="24">std_logic</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="37">unsigned(31 downto 0)</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="50">unsigned(2 downto 0)</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="63">std_logic</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="76">std_logic_vector(31 downto 0)</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="89">std_logic</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="111">std_logic</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="124">std_logic</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="137">std_logic</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="150">unsigned(31 downto 0)</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="163">std_logic_vector(31 downto 0)</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="176">std_logic_vector(3 downto 0)</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="189">unsigned(2 downto 0)</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="202">std_logic</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="215">std_logic</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="228">std_logic_vector(31 downto 0)</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="241">std_logic</text>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="-30" x2="-3" y1="8" y2="8"/>
+    <path d="M0,8 L-6.0,11 L-3.0,8 L-6.0,5 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="-30" x2="-3" y1="21" y2="21"/>
+    <path d="M0,21 L-6.0,24 L-3.0,21 L-6.0,18 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="-30" x2="-3" y1="34" y2="34"/>
+    <path d="M0,34 L-6.0,37 L-3.0,34 L-6.0,31 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="-30" x2="-3" y1="47" y2="47"/>
+    <path d="M0,47 L-6.0,50 L-3.0,47 L-6.0,44 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="-30" x2="-3" y1="60" y2="60"/>
+    <path d="M0,60 L-6.0,63 L-3.0,60 L-6.0,57 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="-30" x2="-3" y1="73" y2="73"/>
+    <path d="M0,73 L-6.0,76 L-3.0,73 L-6.0,70 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="-30" x2="-3" y1="95" y2="95"/>
+    <path d="M0,95 L-6.0,98 L-3.0,95 L-6.0,92 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="-27" x2="0" y1="108" y2="108"/>
+    <path d="M-30,108 L-24.0,111 L-27.0,108 L-24.0,105 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="-30" x2="-3" y1="121" y2="121"/>
+    <path d="M0,121 L-6.0,124 L-3.0,121 L-6.0,118 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="-30" x2="-3" y1="134" y2="134"/>
+    <path d="M0,134 L-6.0,137 L-3.0,134 L-6.0,131 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="-30" x2="-3" y1="147" y2="147"/>
+    <path d="M0,147 L-6.0,150 L-3.0,147 L-6.0,144 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="-27" x2="0" y1="160" y2="160"/>
+    <path d="M-30,160 L-24.0,163 L-27.0,160 L-24.0,157 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="-27" x2="0" y1="173" y2="173"/>
+    <path d="M-30,173 L-24.0,176 L-27.0,173 L-24.0,170 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="335" x2="362" y1="8" y2="8"/>
+    <path d="M365,8 L359.0,11 L362.0,8 L359.0,5 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="338" x2="365" y1="21" y2="21"/>
+    <path d="M335,21 L341.0,24 L338.0,21 L341.0,18 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="335" x2="362" y1="34" y2="34"/>
+    <path d="M365,34 L359.0,37 L362.0,34 L359.0,31 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="335" x2="362" y1="47" y2="47"/>
+    <path d="M365,47 L359.0,50 L362.0,47 L359.0,44 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="338" x2="365" y1="60" y2="60"/>
+    <path d="M335,60 L341.0,63 L338.0,60 L341.0,57 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="338" x2="365" y1="73" y2="73"/>
+    <path d="M335,73 L341.0,76 L338.0,73 L341.0,70 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="338" x2="365" y1="86" y2="86"/>
+    <path d="M335,86 L341.0,89 L338.0,86 L341.0,83 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="335" x2="362" y1="108" y2="108"/>
+    <path d="M365,108 L359.0,111 L362.0,108 L359.0,105 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="338" x2="365" y1="121" y2="121"/>
+    <path d="M335,121 L341.0,124 L338.0,121 L341.0,118 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="335" x2="362" y1="134" y2="134"/>
+    <path d="M365,134 L359.0,137 L362.0,134 L359.0,131 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="335" x2="362" y1="147" y2="147"/>
+    <path d="M365,147 L359.0,150 L362.0,147 L359.0,144 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="335" x2="362" y1="160" y2="160"/>
+    <path d="M365,160 L359.0,163 L362.0,160 L359.0,157 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="335" x2="362" y1="173" y2="173"/>
+    <path d="M365,173 L359.0,176 L362.0,173 L359.0,170 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="335" x2="362" y1="186" y2="186"/>
+    <path d="M365,186 L359.0,189 L362.0,186 L359.0,183 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="335" x2="362" y1="199" y2="199"/>
+    <path d="M365,199 L359.0,202 L362.0,199 L359.0,196 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="338" x2="365" y1="212" y2="212"/>
+    <path d="M335,212 L341.0,215 L338.0,212 L341.0,209 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="338" x2="365" y1="225" y2="225"/>
+    <path d="M335,225 L341.0,228 L338.0,225 L341.0,222 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+    <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="338" x2="365" y1="238" y2="238"/>
+    <path d="M335,238 L341.0,241 L338.0,238 L341.0,235 Z" style="fill:rgb(0,0,0);stroke:none;"/>
+  </g>
+</svg>
