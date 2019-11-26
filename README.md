@@ -24,21 +24,21 @@ end ExampleComp;
 
 Here there are 
 
-Serif font, Top Left component name, arrow style None:
+Serif font, Top Left component name, arrow style None: <br/>
 ![style1](./res/ExampleComp_1.svg)
 
-Arial font, Top Center component name, arrow style Full:
+Arial font, Top Center component name, arrow style Full: <br/>
 ![style2](./res/ExampleComp_2.svg)
 
-FreeMono font, Top Right component name, arrow style Empty:
+FreeMono font, Top Right component name, arrow style Empty: <br/>
 ![style3](./res/ExampleComp_3.svg)
 
-FreeSans font, Bottom Left component name, arrow style Reentrant:
+FreeSans font, Bottom Left component name, arrow style Reentrant: <br/>
 ![style4](./res/ExampleComp_4.svg)
 
-Serif font, Bottom Right component name, arrow style Minimal:
+Serif font, Bottom Right component name, arrow style Minimal: <br/>
 ![style5](./res/ExampleComp_5.svg)
-
+<br/>
 Here it is the JSON configuration file for the last example
 
 ```json
@@ -84,10 +84,10 @@ otherwise you can simply type
 ```
 
 ### Size mappings
-
+<br/>
 [comp](./res/ExampleCompExpl.svg)
 
-maps to the following JSON properties:
+maps to the following JSON properties: <br/>
 
 [mappings](./res/JsonExplainedSizes.svg)
 
