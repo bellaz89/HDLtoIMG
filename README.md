@@ -22,7 +22,7 @@ end ExampleComp;
 
 ```
 
-Here there are some examples 
+Here there are some examples of the produced images: <br /> 
 
 Serif Bold font, Top Left component name, arrow style None: <br/>
 ![style1](./res/ExampleComp_1.svg)
@@ -85,7 +85,7 @@ otherwise you can simply type
 ### Size mappings
 <br/>
 
-![comp](./res/ExampleCompExpl.png)
+![comp](./res/ExampleCompExpl.svg)
 
 maps to the following JSON properties: <br/>
 

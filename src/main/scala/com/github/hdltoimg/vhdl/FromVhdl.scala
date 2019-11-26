@@ -80,13 +80,13 @@ object VhdlToImg {
     val elements = bodyMerged.split(";").map(_.trim).toArray
     
     val (inRe, outRe, inoutRe) = if (conf.removeDefaultInputArg) {
-      ("""(?i)(\w*)\s*:\s*in\s*(.*?(?=(?::=|$)))""".r,
-      """(?i)(\w*)\s*:\s*out\s*(.*?(?=(?::=|$)))""".r,
-      """(?i)(\w*)\s*:\s*inout\s*(.*?(?=(?::=|$)))""".r)
+      ("""(?i)(\w*)\s*:\s*in\s+(.*?(?=(?::=|$)))""".r,
+      """(?i)(\w*)\s*:\s*out\s+(.*?(?=(?::=|$)))""".r,
+      """(?i)(\w*)\s*:\s*inout\s+(.*?(?=(?::=|$)))""".r)
     } else {
-     ("""(?i)(\w*)\s*:\s*in\s*(.*)""".r,
-      """(?i)(\w*)\s*:\s*out\s*(.*)""".r,
-      """(?i)(\w*)\s*:\s*inout\s*(.*)""".r)
+     ("""(?i)(\w*)\s*:\s*in\s+(.*)""".r,
+      """(?i)(\w*)\s*:\s*out\s+(.*)""".r,
+      """(?i)(\w*)\s*:\s*inout\s+(.*)""".r)
     }
     
     val groupsLeft = elements.map(_ match {
