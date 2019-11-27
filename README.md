@@ -5,7 +5,7 @@ A JSON configuration file represents how the output image is produced
 
 ## Examples
 
-Let's say we have the following component declaration 
+Let's say we have the following component declaration in VHDL:    
 
 ```vhdl
 entity ExampleComp is
