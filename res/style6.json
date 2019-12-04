@@ -22,5 +22,5 @@
 "arrowStyle": "StyleReentrant",
 "outputType": "SVGTypeOutput",
 "removeDefaultInputArg": true,
-"standardFormatting": false
+"standardFormatting": true
 }
