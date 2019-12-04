@@ -22,7 +22,7 @@ end ExampleComp;
 
 ```
 
-Here there are some examples of the produced images using vhdl-to-img: <br /> 
+Here there are some examples of the produced images using hdltoimg: <br /> 
 
 Serif Bold font, Top Left component name, arrow style None: <br/>
 ![style1](./res/ExampleComp_1.svg)

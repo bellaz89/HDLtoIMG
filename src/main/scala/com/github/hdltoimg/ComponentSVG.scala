@@ -68,7 +68,8 @@ case class OutputConfig (var figPadX: Double,
   var arrowTipSize: Double,
   var arrowStyle: ArrowStyle,
   var outputType: OutputType,
-  var removeDefaultInputArg: Boolean)
+  var removeDefaultInputArg: Boolean,
+  var standardFormatting: Boolean)
 
 object OutputConfig {
 
@@ -95,7 +96,8 @@ object OutputConfig {
       3.0,
       ArrowStyle.StyleReentrant,
       OutputType.SVGTypeOutput,
-      true)
+      true,
+      false)
   }
 }
 

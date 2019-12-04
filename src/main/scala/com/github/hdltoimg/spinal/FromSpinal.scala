@@ -57,35 +57,35 @@ object fromReport {
 }
 
 
-//package test {
-//  import spinal.lib.bus.amba4.axi._
-//
-//  class SumReg extends Component {
-//    val axiConfig = Axi4Config(
-//      addressWidth = 32,
-//      dataWidth    = 32,
-//      idWidth      = 4)
-//
-//    val io = new Bundle {
-//      val a = in(SInt(4 bits))
-//      val b = in(SInt(4 bits))
-//      val c = inout(SInt(4 bits))
-//      val d = out(SInt(32 bits))
-//      val f = out(Bool)
-//    }
-//
-//    val reg = Reg(SInt(4 bits))
-//
-//    reg := io.a + io.b
-//    io.c := reg
-//    io.d := reg.resized
-//    io.f := False
-//  }
-//
-//
-//  object ComponentTest {
-//    def main(args: Array[String]): Unit = {
-//      fromComponent(new SumReg(), "test.svg")
-//    }
-//  }
-//}
+package test {
+  import spinal.lib.bus.amba4.axi._
+
+  class SumReg extends Component {
+    val axiConfig = Axi4Config(
+      addressWidth = 32,
+      dataWidth    = 32,
+      idWidth      = 4)
+
+    val io = new Bundle {
+      val a = in(SInt(4 bits))
+      val b = in(SInt(4 bits))
+      val c = inout(SInt(4 bits))
+      val d = out(SInt(32 bits))
+      val f = out(Bool)
+    }
+
+    val reg = Reg(SInt(4 bits))
+
+    reg := io.a + io.b
+    io.c := reg
+    io.d := reg.resized
+    io.f := False
+  }
+
+
+  object SpinalHDLtoIMGTest {
+    def main(args: Array[String]): Unit = {
+      fromComponent(new SumReg(), "test.svg")
+    }
+  }
+}

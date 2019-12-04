@@ -21,5 +21,6 @@
 "arrowTipSize": 3.0,
 "arrowStyle": "StyleEmpty",
 "outputType": "SVGTypeOutput",
-"removeDefaultInputArg": true
+"removeDefaultInputArg": true,
+"standardFormatting": true
 }

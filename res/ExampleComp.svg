@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" height="113px" version="1.1" viewBox="0 0 391 113" width="391px" x="0px" y="0px" xmlns="http://www.w3.org/2000/svg">
-  <g transform="translate(152 22)">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" height="113px" version="1.1" viewBox="0 0 307 113" width="307px" x="0px" y="0px" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(110 22)">
     <rect height="87" style="fill:rgb(255,255,255);stroke:none;" width="80" x="0" y="0"/>
     <rect height="87" style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" width="80" x="0" y="0"/>
     <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;DejaVu Serif&quot;;font-size:11px;font-weight:bold;" x="4" y="-7">ExampleComp</text>
@@ -12,12 +12,12 @@
     <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;DejaVu Serif&quot;;font-size:10px;font-weight:bold;" x="4" y="79">io_c</text>
     <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;DejaVu Serif&quot;;font-size:10px;font-weight:bold;" x="53" y="14">io_d</text>
     <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;DejaVu Serif&quot;;font-size:10px;font-weight:bold;" x="56" y="28">io_f</text>
-    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;DejaVu Serif&quot;;font-size:10px;font-weight:bold;" x="-144" y="14">signed(3 downto 0)</text>
-    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;DejaVu Serif&quot;;font-size:10px;font-weight:bold;" x="-144" y="28">signed(3 downto 0)</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;DejaVu Serif&quot;;font-size:10px;font-weight:bold;" x="-102" y="14">signed[3:0]</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;DejaVu Serif&quot;;font-size:10px;font-weight:bold;" x="-102" y="28">signed[3:0]</text>
     <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;DejaVu Serif&quot;;font-size:10px;font-weight:bold;" x="-88" y="42">std_logic</text>
     <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;DejaVu Serif&quot;;font-size:10px;font-weight:bold;" x="-88" y="56">std_logic</text>
-    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;DejaVu Serif&quot;;font-size:10px;font-weight:bold;" x="-144" y="79">signed(3 downto 0)</text>
-    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;DejaVu Serif&quot;;font-size:10px;font-weight:bold;" x="116" y="14">signed(31 downto 0)</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;DejaVu Serif&quot;;font-size:10px;font-weight:bold;" x="-102" y="79">signed[3:0]</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;DejaVu Serif&quot;;font-size:10px;font-weight:bold;" x="116" y="14">signed[31:0]</text>
     <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;DejaVu Serif&quot;;font-size:10px;font-weight:bold;" x="116" y="28">std_logic</text>
     <line style="fill:none;stroke:rgb(0,0,0);stroke-width:2;stroke-miterlimit:10;stroke-linecap:square;" x1="-32" x2="-5" y1="11" y2="11"/>
     <path d="M-2,11 L-8.0,14 L-8.0,8 Z" style="fill:rgb(255,255,255);stroke:none;"/>

@@ -129,6 +129,7 @@ object obtainConfig {
     cursor.downField("arrowPadX").as[Double] match { case Right(x) => conf.arrowPadX = x}
     cursor.downField("arrowThickness").as[Double] match { case Right(x) => conf.arrowThickness = x}
     cursor.downField("arrowTipSize").as[Double] match { case Right(x) => conf.arrowTipSize = x}
+    cursor.downField("standardFormatting").as[Boolean] match { case Right(x) => conf.standardFormatting = x}
     
     val arrowStyleStr = cursor.downField("arrowStyle").as[String] match { case Right(x) => x}
     conf.arrowStyle = arrowStyleStr match {

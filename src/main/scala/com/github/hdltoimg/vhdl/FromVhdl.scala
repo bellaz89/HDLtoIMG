@@ -1,4 +1,6 @@
 package com.github.hdltoimg.vhdl
+
+import scala.collection.mutable.{ArrayBuffer, StringBuilder}
 import scala.io.Source
 import java.io.{File, FileOutputStream}
 import scopt.OParser
@@ -15,8 +17,8 @@ object VhdlToImg {
   val parser= {
     import builder._
     OParser.sequence(
-      programName("from-vhdl"),
-      head("from-vhdl","1.0"),
+      programName("hdltoimg"),
+      head("hdltoimg","1.0"),
       opt[String]('i', "input")
         .required()
         .action((x, c) => c.copy(file = new File(x)))
@@ -89,11 +91,70 @@ object VhdlToImg {
       """(?i)(\w*)\s*:\s*inout\s+(.*)""".r)
     }
     
-    val groupsLeft = elements.map(_ match {
-      case inRe(name, desc) => SignalInfo(name, desc, ArrowDirection.PointRight, arrowStyle)
-      case outRe(name, desc) => SignalInfo(name, desc, ArrowDirection.PointLeft, arrowStyle)
-      case inoutRe(name, desc) => SignalInfo(name, desc, ArrowDirection.PointBoth, arrowStyle)
-    })
+    val groupsLeft = if (conf.standardFormatting) {
+      elements.map(_ match {
+        case inRe(name, desc) => SignalInfo(name, standardizeDesc(desc), ArrowDirection.PointRight, arrowStyle)
+        case outRe(name, desc) => SignalInfo(name, standardizeDesc(desc), ArrowDirection.PointLeft, arrowStyle)
+        case inoutRe(name, desc) => SignalInfo(name, standardizeDesc(desc), ArrowDirection.PointBoth, arrowStyle)
+      })
+    } else {
+      elements.map(_ match {
+        case inRe(name, desc) => SignalInfo(name, desc, ArrowDirection.PointRight, arrowStyle)
+        case outRe(name, desc) => SignalInfo(name, desc, ArrowDirection.PointLeft, arrowStyle)
+        case inoutRe(name, desc) => SignalInfo(name, desc, ArrowDirection.PointBoth, arrowStyle)
+      })
+    }
   ComponentInfo(componentName, Array(groupsLeft), Array())
   }
+
+  def standardizeDesc(desc: String): String = {
+    val matchMultiwire = """(?i)([^\(\)]+)\((.*?(?: to | downto).+)""".r 
+    desc.trim match {
+      case matchMultiwire(outerDesc, innerDesc) => {
+        val stringElems = new ArrayBuffer[String]()
+        var elemAccum = new StringBuilder()
+        var parenDepth = 0
+
+        for(c <- innerDesc) {
+
+          if(c == ')') {
+            parenDepth -= 1
+            if(parenDepth == -1) {
+              stringElems.append(elemAccum.toString)
+              elemAccum = new StringBuilder()
+            }
+          }
+
+          if(parenDepth >= 0) elemAccum += c
+          
+          if(c == ',' & parenDepth == 0){
+            stringElems.append(elemAccum.toString)
+            elemAccum = new StringBuilder()
+          }
+
+          if(c == '(') {
+            parenDepth += 1
+          }
+        }
+        stringElems.append(elemAccum.toString)
+
+        outerDesc + '['+ stringElems.map(x => standardizeRange(x)).mkString + ']'
+      }
+
+      case _ => desc
+    }
+  }
+
+  def standardizeRange(ran: String): String = {
+    
+    val downtoMatch = "(?i)(.*?) downto (.*)".r
+    val toMatch = "(?i)(.*?) to (.*)".r
+
+    ran.trim match {
+      case downtoMatch(m1, m2) => (m1.trim + ':' + m2.trim).trim 
+      case toMatch(m1, m2) => (m1.trim + ':' + m2.trim).trim
+      case str => str.trim
+    }
+  }
 }
+

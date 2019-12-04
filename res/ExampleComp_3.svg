@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" height="105px" version="1.1" viewBox="0 0 369 105" width="369px" x="0px" y="0px" xmlns="http://www.w3.org/2000/svg">
-  <g transform="translate(144 18)">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" height="105px" version="1.1" viewBox="0 0 281 105" width="281px" x="0px" y="0px" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(100 18)">
     <rect height="83" style="fill:rgb(128,255,133);stroke:none;" width="74" x="0" y="0"/>
     <rect height="83" style="fill:none;stroke:rgb(0,0,0);stroke-width:0.25;stroke-miterlimit:10;stroke-linecap:square;" width="74" x="0" y="0"/>
     <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeMono&quot;;font-size:11px;font-weight:bold;" x="-4" y="-5">ExampleComp</text>
@@ -12,12 +12,12 @@
     <text style="fill:rgb(0,0,0);stroke:none;font-size:10px;font-weight:bold;" x="1" y="77">io_c</text>
     <text style="fill:rgb(0,0,0);stroke:none;font-size:10px;font-weight:bold;" x="51" y="12">io_d</text>
     <text style="fill:rgb(0,0,0);stroke:none;font-size:10px;font-weight:bold;" x="54" y="26">io_f</text>
-    <text style="fill:rgb(0,0,0);stroke:none;font-size:10px;font-weight:bold;" x="-140" y="12">signed(3 downto 0)</text>
-    <text style="fill:rgb(0,0,0);stroke:none;font-size:10px;font-weight:bold;" x="-140" y="26">signed(3 downto 0)</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-size:10px;font-weight:bold;" x="-96" y="12">signed[3:0]</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-size:10px;font-weight:bold;" x="-96" y="26">signed[3:0]</text>
     <text style="fill:rgb(0,0,0);stroke:none;font-size:10px;font-weight:bold;" x="-80" y="40">std_logic</text>
     <text style="fill:rgb(0,0,0);stroke:none;font-size:10px;font-weight:bold;" x="-80" y="54">std_logic</text>
-    <text style="fill:rgb(0,0,0);stroke:none;font-size:10px;font-weight:bold;" x="-140" y="77">signed(3 downto 0)</text>
-    <text style="fill:rgb(0,0,0);stroke:none;font-size:10px;font-weight:bold;" x="105" y="12">signed(31 downto 0)</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-size:10px;font-weight:bold;" x="-96" y="77">signed[3:0]</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-size:10px;font-weight:bold;" x="105" y="12">signed[31:0]</text>
     <text style="fill:rgb(0,0,0);stroke:none;font-size:10px;font-weight:bold;" x="105" y="26">std_logic</text>
     <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="-30" x2="-3" y1="9" y2="9"/>
     <path d="M0,9 L-6.0,12 L-6.0,6 Z" style="fill:rgb(255,255,255);stroke:none;"/>
