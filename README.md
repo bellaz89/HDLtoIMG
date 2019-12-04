@@ -30,13 +30,13 @@ Serif Bold font, Top Left component name, arrow style None: <br/>
 Arial Bold font, Top Center component name, arrow style Full: <br/>
 ![style2](./res/ExampleComp_2.svg)
 
-FreeMono Bold font, Top Right component name, arrow style Empty: <br/>
+FreeMono Bold font, Top Right component name, arrow style Empty, standard formatting for ranged signals: <br/>
 ![style3](./res/ExampleComp_3.svg)
 
-FreeSans Bold font, Bottom Left component name, arrow style Reentrant: <br/>
+FreeSans Bold font, Bottom Left component name, arrow style Reentrant, standard formatting for ranged signals: <br/>
 ![style4](./res/ExampleComp_4.svg)
 
-Serif Italic font, Bottom Right component name, arrow style Minimal: <br/>
+Serif Italic font, Bottom Right component name, arrow style Minimal, standard formatting for ranged signals: <br/>
 ![style5](./res/ExampleComp_5.svg)
 <br/>
 Here it is the JSON configuration file for the last example
@@ -65,7 +65,8 @@ Here it is the JSON configuration file for the last example
 "arrowTipSize": 3.0,
 "arrowStyle": "StyleMinimal",
 "outputType": "SVGTypeOutput",
-"removeDefaultInputArg": true
+"removeDefaultInputArg": true,
+"standardFormatting" : false
 }
 ```
 
@@ -92,7 +93,7 @@ be applied.
 
 maps to the following JSON properties: <br/>
 
-![mappings](./res/JsonExplainedSizes.svg)
+![mappings](./res/JsonExplainedSizes.png)
 
 
 ### Box width
@@ -153,6 +154,21 @@ There are four options:
 - ITALIC
 - BOLDITALIC
 
+
+### Standard Formatting
+
+The default behaviour in the image creation process is to keep the whole signal type name as it is:
+
+(example for as signed VHDL signal)
+```
+    signed(3 downto 0)
+```
+
+If the standardNotation configuration property is set, the above type is transformed
+to:
+```
+    signed[3:0]
+```
 
 ## Installation Requirements
 
