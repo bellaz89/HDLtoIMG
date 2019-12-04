@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" height="271px" version="1.1" viewBox="0 0 697 271" width="697px" x="0px" y="0px" xmlns="http://www.w3.org/2000/svg">
-  <g transform="translate(181 4)">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" height="271px" version="1.1" viewBox="0 0 621 271" width="621px" x="0px" y="0px" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(143 4)">
     <rect height="247" style="fill:rgb(128,240,255);stroke:none;" width="335" x="0" y="0"/>
     <rect height="247" style="fill:none;stroke:rgb(0,0,0);stroke-width:0.25;stroke-miterlimit:10;stroke-linecap:square;" width="335" x="0" y="0"/>
     <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:11px;font-weight:bold;" x="1" y="259">VexRiscv</text>
@@ -45,27 +45,27 @@
     <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="-76" y="98">std_logic</text>
     <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="-76" y="111">std_logic</text>
     <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="-76" y="124">std_logic</text>
-    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="-135" y="137">unsigned(7 downto 0)</text>
-    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="-177" y="150">std_logic_vector(31 downto 0)</text>
-    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="-177" y="163">std_logic_vector(31 downto 0)</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="-97" y="137">unsigned[7:0]</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="-139" y="150">std_logic_vector[31:0]</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="-139" y="163">std_logic_vector[31:0]</text>
     <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="-76" y="176">std_logic</text>
     <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="11">std_logic</text>
     <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="24">std_logic</text>
-    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="37">unsigned(31 downto 0)</text>
-    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="50">unsigned(2 downto 0)</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="37">unsigned[31:0]</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="50">unsigned[2:0]</text>
     <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="63">std_logic</text>
-    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="76">std_logic_vector(31 downto 0)</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="76">std_logic_vector[31:0]</text>
     <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="89">std_logic</text>
     <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="111">std_logic</text>
     <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="124">std_logic</text>
     <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="137">std_logic</text>
-    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="150">unsigned(31 downto 0)</text>
-    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="163">std_logic_vector(31 downto 0)</text>
-    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="176">std_logic_vector(3 downto 0)</text>
-    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="189">unsigned(2 downto 0)</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="150">unsigned[31:0]</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="163">std_logic_vector[31:0]</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="176">std_logic_vector[3:0]</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="189">unsigned[2:0]</text>
     <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="202">std_logic</text>
     <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="215">std_logic</text>
-    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="228">std_logic_vector(31 downto 0)</text>
+    <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="228">std_logic_vector[31:0]</text>
     <text style="fill:rgb(0,0,0);stroke:none;font-family:&quot;FreeSans&quot;;font-size:10px;font-weight:bold;" x="366" y="241">std_logic</text>
     <line style="fill:none;stroke:rgb(0,0,0);stroke-miterlimit:10;stroke-linecap:square;" x1="-30" x2="-3" y1="8" y2="8"/>
     <path d="M0,8 L-6.0,11 L-3.0,8 L-6.0,5 Z" style="fill:rgb(0,0,0);stroke:none;"/>
