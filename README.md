@@ -215,6 +215,13 @@ build.sbt to your Wix Toolset installation: **wixProductId**, **wixProductUpgrad
 
 Generates a .msi in target/
 
+## Todo
+
+- Cross arrows when the signal is ranged
+- SpinalHDL support
+- Other languages support (Verilog/Chisel)
+- Test the package build process on other platforms other than Linux
+
 ## Notes
 
 All the HDL examples were produced using [SpinalHDL](https://github.com/SpinalHDL/SpinalHDL) and
